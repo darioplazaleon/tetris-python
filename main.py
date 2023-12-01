@@ -2,7 +2,12 @@ import pygame
 import sys
 from game import Game
 
+print(pygame.__version__)
+
 pygame.init()
+
+icono = pygame.image.load('sounds/code_icon-icons.com_61210.png')
+pygame.display.set_icon(icono)
 
 title = pygame.font.Font(None, 40)
 score = title.render('Score', True, (255, 255, 255))
@@ -15,7 +20,7 @@ score_rect = pygame.Rect(320, 55, 170, 60)
 next_rectangule = pygame.Rect(320, 215, 170, 180)
 
 SCREEN = pygame.display.set_mode((500, 620))
-pygame.display.set_caption("Tetris waza")
+pygame.display.set_caption("TetrisDemo by Dario Plaza Leon")
 
 
 pygame.mixer.music.load('sounds/tetris_theme.ogg')
